@@ -1,0 +1,33 @@
+{
+  "cloud-init": {
+    "write_files": [
+      {
+        "content": "TrustedUserCAKeys /etc/ssh/ssh_signer_ca_nectar_aklops.pem\n",
+        "path": "/etc/ssh/sshd_config",
+        "append": true
+      },
+      {
+        "content": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDtVGBRD/dAo23UBeSAeqCJXZ3Bd8fwkEELu0Rr4TG2pxqiQqddT3D307HwMmQ51jDFxidJEoUdhFjzExzVg7qWXjAXILfpaniFfVSbKSxs3eplx/45UfNage8eEA6y5JCEm2bwn/4K4rN1mSYxiHoDl2Q0eQ3jk/oSpA/TyP0o5qKcxicjDb4m3Pza1PXXoup6e7cnwTffDEZVEYeFTngQ0OsJB2lxsI09ccg59eP6VnH44Aed48rx+bb/RSwvQYa7GxHDB1aTTx0onPEf1WgoXJzfdpk4DmA5bF8hydUk413NCJ/e2TAF7Nr2ce5RMGgmFuUUKyXoXXm5CnlhboadHZ/KNoOSp3hQZjPWFWLkLkV6pss1VYRswTKlk+VieJk8cR24z830uTh9+Gyh8R62YPrUvELRNpAkecuNmSntjuY95JI5jWvVRL+f4V6CngDNt9pCMFctawsra0rhRjN5i1E6SLP5ln83OOVBOoGNuCQ1csk1hn11HnpsIQzxxcH1RwrI+ELkXfDNoU0aMooRbzyQHgCqAgUMrtfZ3d4J46uUasXnx928gqzs4znulWPlDfah/iCOqOwA/dYLu0PKcxLb0kT6vGC/uxAlfUfmnxeKtHyYaSOgVYB5asCvgQcvAwafwHJKZMbTVetrlK9LMFTdRgctPSLcO+WPscMAZw== ssh_signer_ca_nectar_aklops\n",
+        "path": "/etc/ssh/ssh_signer_ca_nectar_aklops.pem"
+      }
+    ],
+    "users": [
+      "default",
+      {
+        "name": "aklops",
+        "gecos": "Auckland Operator Account",
+        "shell": "/bin/bash",
+        "lock_passwd": true,
+        "groups": [
+          "sudo"
+        ],
+        "sudo": [
+          "ALL=(ALL) NOPASSWD:ALL"
+        ],
+        "ssh_authorized_keys": [
+          "from=\"130.216.*\" ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICHODQ9IQyUDa7Dm3k9M2I5KU0Qu++hIUqVo+EapIZ2Z aklops@nectar.auckland.ac.nz"
+        ]
+      }
+    ]
+  }
+}

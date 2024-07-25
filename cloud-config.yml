@@ -1,8 +1,0 @@
-#cloud-config\nusers:\n  - default\n  - name: aklops\n    shell: /bin/bash\n    groups:\n      - sudo\n    sudo:\n      - ALL=(ALL:ALL) NOPASSWD:ALL\n    ssh_authorized_keys:\n      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICHODQ9IQyUDa7Dm3k9M2I5KU0Qu++hIUqVo+EapIZ2Z
-  shell: /bin/bash
-  groups:
-    - sudo
-  sudo:
-    - ALL=(ALL:ALL) NOPASSWD:ALL
-  ssh_authorized_keys:
-    - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICHODQ9IQyUDa7Dm3k9M2I5KU0Qu++hIUqVo+EapIZ2Z aklops@nectar.auckland.ac.nz

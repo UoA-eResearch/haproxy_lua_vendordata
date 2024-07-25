@@ -12,6 +12,7 @@ services:
     volumes:
       - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
       - ./haproxy/vendor_data.lua:/usr/local/etc/haproxy/vendor_data.lua:ro
+      - ./haproxy/cloud-config.json:/usr/local/etc/haproxy/cloud-config.json:ro
   web:
     build:
       context: ./web
